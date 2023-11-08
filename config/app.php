@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('CHATIFY_NAME', 'Chatify Messenger'),
 
     /*
     |--------------------------------------------------------------------------
@@ -185,6 +185,7 @@ return [
         /*
          * Package Service Providers...
          */
+        \Chatify\ChatifyServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -207,9 +208,10 @@ return [
     | the aliases are "lazy" loaded so they don't hinder performance.
     |
     */
-
+    
     'aliases' => Facade::defaultAliases()->merge([
-        // 'ExampleClass' => App\Example\ExampleClass::class,
+        'Chatify' => Chatify\Facades\ChatifyMessenger::class,
     ])->toArray(),
+    
 
 ];

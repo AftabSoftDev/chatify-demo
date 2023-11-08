@@ -38,15 +38,15 @@ return [
     |-------------------------------------
     */
     'pusher' => [
-        'debug' => env('APP_DEBUG', false),
-        'key' => env('PUSHER_APP_KEY'),
-        'secret' => env('PUSHER_APP_SECRET'),
-        'app_id' => env('PUSHER_APP_ID'),
-        'options' => [
-            'cluster' => env('PUSHER_APP_CLUSTER'),
-            'encrypted' => true,
-        ],
+    'debug' => env('APP_DEBUG', false),
+    'key' => env('PUSHER_APP_KEY'),
+    'secret' => env('PUSHER_APP_SECRET'),
+    'app_id' => env('PUSHER_APP_ID'),
+    'options' => (array) [
+        'cluster' => env('PUSHER_APP_CLUSTER'),
+        'encrypted' => env('PUSHER_APP_USETLS'),
     ],
+],
 
     /*
     |-------------------------------------
@@ -91,16 +91,16 @@ return [
     |-------------------------------------
     */
     'colors' => (array) [
-        '#2180f3',
-        '#2196F3',
-        '#00BCD4',
-        '#3F51B5',
-        '#673AB7',
-        '#4CAF50',
-        '#FFC107',
-        '#FF9800',
-        '#ff2522',
-        '#9C27B0',
+    '#2180f3',
+    '#2196F3',
+    '#00BCD4',
+    '#3F51B5',
+    '#673AB7',
+    '#4CAF50',
+    '#FFC107',
+    '#FF9800',
+    '#ff2522',
+    '#9C27B0',
     ],
     /*
     |-------------------------------------
